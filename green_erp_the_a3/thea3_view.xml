@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+    
+    
+        <record model="ir.ui.view" id="ho_so_tree">
+            <field name="name">ho.so.tree</field>
+            <field name="model">ho.so</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Tree Ho So">
+                    <field name="name" />                
+                    <field name="ngay_lap" />
+                    <field name="ngay_dk" />
+                    <field name="ngay_luu" />
+                    <field name="so_luu" />
+                    <field name="trich_yeu" />
+                    <field name="doi_tuong_line"/>
+                    <field name="lien_quan_ids"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="ho_so_form">
+            <field name="name">ho.so.form</field>
+            <field name="model">ho.so</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="form Hồ sơ" version="7.0">
+                    <header>
+                    </header>
+                    <sheet>
+                    	<group col="2" colspan="2">
+                        <field name="name" />
+                    </group>
+                        <group col="4" colspan="2">
+                            <group colspan="2">
+			                    <field name="ngay_lap" />
+			                    <field name="so_luu" />
+                            </group>
+                            <group colspan="2">
+                            	<field name="ngay_dk" />
+			                    <field name="ngay_luu" />
+                            </group>
+                        </group>
+                        <group col="2" colspan="2">
+                        <field name="trich_yeu" />
+			            <field name="lien_quan_ids" widget="many2many_tags"/>
+			            </group>
+			            <group string= "Đối tượng trong vụ">
+                        <field name="doi_tuong_line" nolabel="1">
+	                    	<tree editable='top'>
+	                    		<field name="name" />                
+			                    <field name="nam_sinh" />
+			                    <field name="danh_ban_so" />
+			                    <field name="hinh_thuc" />
+	                    	</tree>
+	                     </field>
+	                     </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="action_ho_so">
+            <field name="name">Thẻ A3</field>
+            <field name="res_model">ho.so</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+	<menuitem id="ho_so" name="Thẻ A3"/>
+    <menuitem id="menu_ho_so" parent="ho_so" name="Thẻ A3"/>
+    <menuitem id="menu_action_ho_so" parent="menu_ho_so" name="Thẻ A3" action="action_ho_so"/>
+ 
+    </data>
+</openerp>
