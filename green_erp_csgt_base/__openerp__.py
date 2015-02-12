@@ -19,24 +19,22 @@
 #
 ##############################################################################
 
-
 {
-    'name': 'GreenERP The A3',
-    'version': '1.1',
+    'name': 'GreenERP BASE',
+    'version': '1.0',
     'category': 'GreenERP',
-    "author" : "nguyentoanit@gmail.com",
-    "website" : "http://vietsolutionis.com/",
-    'images': [],
-    'depends': ['green_erp_csgt_base','report_aeroo','report_aeroo_ooo'],
+    'sequence': 14,
+    'author': 'nguyentoanit@gmail.com',
+    'website' : 'http://vietsolutionis.com/',
+    'depends': ['web'],
     'data': [
-             'security/green_erp_the_a3_security.xml',
-             'security/ir.model.access.csv',
-             'report/thea3_report.xml',
-             'thea3_view.xml',
-             ],
-    'demo': [],
-    'test': [],
+    ],
+    'css' : [
+        "static/src/css/base.css",
+    ],
+    'qweb': ['static/src/xml/base.xml'],
     'installable': True,
     'auto_install': False,
+    'application': True,
 }
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

@@ -54,15 +54,14 @@ class Parser(report_sxw.rml_parse):
                             'danh_ban_so': data.danh_ban_so,
                             'hinh_thuc': data.hinh_thuc,
                             })
-        for data in line:
-            if line_limit and line_limit > count:
-                while(line_limit != count):
-                    res.append({
-                                'name': ' ',
-                                'nam_sinh': ' ',
-                                'danh_ban_so': ' ',
-                                'hinh_thuc': ' ',
-                                })
-                    count +=1
+        if line_limit and line_limit > count:
+            while(line_limit != count):
+                res.append({
+                            'name': ' ',
+                            'nam_sinh': ' ',
+                            'danh_ban_so': ' ',
+                            'hinh_thuc': ' ',
+                            })
+                count +=1
         return res
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

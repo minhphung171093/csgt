@@ -2,21 +2,18 @@
 <openerp>
     <data>
     
-    
         <record model="ir.ui.view" id="ho_so_tree">
             <field name="name">ho.so.tree</field>
             <field name="model">ho.so</field>
             <field name="type">tree</field>
             <field name="arch" type="xml">
-                <tree string="Tree Ho So">
+                <tree string="Thẻ A3">
                     <field name="name" />                
                     <field name="ngay_lap" />
                     <field name="ngay_dk" />
                     <field name="ngay_luu" />
                     <field name="so_luu" />
                     <field name="trich_yeu" />
-                    <field name="doi_tuong_line"/>
-                    <field name="lien_quan_ids"/>
                 </tree>
             </field>
         </record>
@@ -25,7 +22,7 @@
             <field name="model">ho.so</field>
             <field name="type">form</field>
             <field name="arch" type="xml">
-                <form string="form Hồ sơ" version="7.0">
+                <form string="Thẻ A3" version="7.0">
                     <header>
                     </header>
                     <sheet>
@@ -67,9 +64,9 @@
             <field name="view_mode">tree,form</field>
         </record>
 
-	<menuitem id="ho_so" name="Thẻ A3"/>
-    <menuitem id="menu_ho_so" parent="ho_so" name="Thẻ A3"/>
-    <menuitem id="menu_action_ho_so" parent="menu_ho_so" name="Thẻ A3" action="action_ho_so"/>
+		<menuitem id="ho_so" name="Thẻ A3"/>
+	    <menuitem id="menu_ho_so" parent="ho_so" name="Thẻ A3"/>
+	    <menuitem id="menu_action_ho_so" parent="menu_ho_so" name="Thẻ A3" action="action_ho_so"/>
  
     </data>
 </openerp>

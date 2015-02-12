@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_csgt_the_a3_1,"ho_so","model_ho_so","green_erp_the_a3.group_csgt_the_a3_user","True","True","True","True"
+access_csgt_the_a3_2,"doi_tuong","model_doi_tuong","green_erp_the_a3.group_csgt_the_a3_user","True","True","True","True"

@@ -5,7 +5,7 @@
 	        <field name="name">the.a3.report</field>
 	        <field name="type">ir.actions.report.xml</field>
 	        <field name="model">ho.so</field>
-	        <field name="report_name">Thẻ A3</field>
+	        <field name="report_name">Thẻ A3 - 1 Dòng</field>
 	        <field name="report_type">aeroo</field>
 	        <field name="in_format">oo-odt</field>
 	        <field name="out_format" model="report.mimetypes" search="[('code','=','oo-pdf'),('compatible_types','=','oo-odt')]"/>
@@ -22,7 +22,31 @@
 			id="the_a3_report" 
 			model="ho.so" 
 			name="the_a3_report"
-	        string="Thẻ A3"
-	        rml="green_erp_the_a3/report/thea3_report.odt"/> 	
+	        string="Thẻ A3 - 1 Dòng"
+	        rml="green_erp_the_a3/report/thea3_report.odt"/>
+	        
+        <record id="the_a3_report_2" model="ir.actions.report.xml">
+	        <field name="name">the.a3.report</field>
+	        <field name="type">ir.actions.report.xml</field>
+	        <field name="model">ho.so</field>
+	        <field name="report_name">Thẻ A3 - 2 Dòng</field>
+	        <field name="report_type">aeroo</field>
+	        <field name="in_format">oo-odt</field>
+	        <field name="out_format" model="report.mimetypes" search="[('code','=','oo-pdf'),('compatible_types','=','oo-odt')]"/>
+	        <field name="parser_loc">green_erp_the_a3/report/thea3_report.py</field>
+	        <field name="report_rml">green_erp_the_a3/report/thea3_report_2.odt</field>
+	        <field name="parser_state">loc</field>
+	        <field name="tml_source">file</field>
+	        <field name="attachment_use" eval="0"/>
+    	</record> 
+    	   
+    	<report 
+			auto="False" 
+			menu="True"
+			id="the_a3_report_2" 
+			model="ho.so" 
+			name="the_a3_report_2"
+	        string="Thẻ A3 - 2 Dòng"
+	        rml="green_erp_the_a3/report/thea3_report_2.odt"/>
 	</data>
 </openerp>
