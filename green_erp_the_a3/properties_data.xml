@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+ <data>
+ 		
+ 		<record id="default_canbo_lap_hoso" model="admin.property">
+            <field name="name">default_canbo_lap_hoso</field>
+            <field name="value">Lạc Văn Tuấn</field>
+        </record>
+		
+   </data>  
+</openerp>
