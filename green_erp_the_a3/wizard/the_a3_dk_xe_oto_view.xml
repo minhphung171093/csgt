@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>   
+        <record id="view_the_a3_dk_xe_oto_report" model="ir.ui.view">
+            <field name="name">the.a3.dk.xe.oto.report</field>
+            <field name="model">the.a3.dk.xe.oto</field>
+            <field name="arch" type="xml">
+                <form string="Đăng ký xe ô tô" version="7.0">
+                	<group>
+	                    <field name='tu_ngay'/>  
+	                    <field name='den_ngay'/>
+                 	</group>
+                    <footer>
+                        <button name="print_report" string="Print" type="object" class="oe_highlight" context="{'type':'appointments'}"/>
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>        
+        <record id="action_the_a3_dk_xe_oto_report" model="ir.actions.act_window">
+            <field name="name">Đăng ký xe ô tô</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">the.a3.dk.xe.oto</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+        
+        
+    </data>
+</openerp>
+

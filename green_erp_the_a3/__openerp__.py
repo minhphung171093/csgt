@@ -32,6 +32,8 @@
              'security/green_erp_the_a3_security.xml',
              'security/ir.model.access.csv',
              'report/thea3_report.xml',
+             'report/the_a3_dk_xe_oto_report.xml',
+             'wizard/the_a3_dk_xe_oto_view.xml',
              'thea3_view.xml',
              'properties_data.xml',
              ],

@@ -24,6 +24,7 @@
 # A Module to School Fees Management System
 #-------------------------------------------------------
 import report
+import wizard
 import thea3
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
 

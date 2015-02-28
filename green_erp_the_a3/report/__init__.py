@@ -24,6 +24,7 @@
 # A Module to School Fees Management System
 #-------------------------------------------------------
 import thea3_report
+import the_a3_dk_xe_oto_report
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
 
 

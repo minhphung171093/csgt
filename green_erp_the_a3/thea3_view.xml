@@ -66,7 +66,9 @@
 
 		<menuitem id="ho_so" name="Thẻ A3"/>
 	    <menuitem id="menu_ho_so" parent="ho_so" name="Thẻ A3"/>
-	    <menuitem id="menu_action_ho_so" parent="menu_ho_so" name="Thẻ A3" action="action_ho_so"/>
+	    <menuitem id="menu_action_ho_so" parent="menu_ho_so" name="Thẻ A3" action="action_ho_so" sequence="5"/>
+	    <menuitem id="menu_action_the_a3_dk_xe_oto_report" action="action_the_a3_dk_xe_oto_report"
+            parent="menu_ho_so" sequence="10"/>
  
     </data>
 </openerp>
