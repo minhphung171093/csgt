@@ -63,6 +63,52 @@
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
         </record>
+    	<record id="cap_nhat_oto_tree_view" model="ir.ui.view">
+			<field name="name">cap.nhat.oto.tree</field>
+			<field name="model">cap.nhat.oto</field>
+			<field name="arch" type="xml">
+				<tree string="Cập Nhật Hồ Sơ">
+					<field name ="name"/>
+					<field name="state"/>
+				</tree>
+			</field>
+		</record>
+
+		<record id="cap_nhat_oto_form_view" model="ir.ui.view">
+            <field name="name">cap.nhat.oto.form</field>
+            <field name="model">cap.nhat.oto</field>
+            <field name="arch" type="xml">
+                <form string="Cập Nhật Hồ Sơ" version="7.0">
+                    <header>
+	                    <button name="cap_nhat_ho_so" states='draft' string="Cập Nhật" type="object" class="oe_highlight" />
+	                    <field name="state" widget="statusbar" statusbar_visible="draft,done" statusbar_colors='{"draft":"blue","done":"blue"}'/>
+	                </header>                
+                	<sheet>  
+                		<group>
+                		<field name ="name"/>
+						<label for="datas" string="Dữ liệu cập nhật"/>
+							<div>
+								<field name="datas" filename="datas_fname"/>
+	                        	<field name="datas_fname" invisible="1" class="oe_inline oe_right"/>
+	                        </div>
+                		</group>
+                	</sheet>
+				</form>
+			</field>
+		</record>
+
+        <record id="action_cap_nhat_oto_form" model="ir.actions.act_window">
+            <field name="name">Cập Nhật Hồ Sơ</field>
+			<field name="type">ir.actions.act_window</field>
+            <field name="res_model">cap.nhat.oto</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="cap_nhat_oto_tree_view"/>
+        </record>
+        <menuitem id="menu_cap_nhat" parent="ho_so" name="Cập Nhật"/>
+        <menuitem action="action_cap_nhat_oto_form"
+            id="menu_action_cap_nhat_oto_form"
+            parent="menu_cap_nhat" sequence="100"/>
 
 		<menuitem id="ho_so" name="Thẻ A3"/>
 	    <menuitem id="menu_ho_so" parent="ho_so" name="Thẻ A3"/>
