@@ -7,7 +7,8 @@
             <field name="arch" type="xml">
                 <form string="Đăng ký xe ô tô" version="7.0">
                 	<group>
-	                    <field name='tu_ngay'/>  
+                		<field name='cb_lap_hs'/>
+	                    <field name='tu_ngay'/>
 	                    <field name='den_ngay'/>
                  	</group>
                     <footer>

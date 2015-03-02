@@ -2,6 +2,27 @@
 <openerp>
     <data>
     
+    	<record id="the_a3_search" model="ir.ui.view">
+	        <field name="name">the.a3.search</field>
+	        <field name="model">ho.so</field>
+	        <field name="type">search</field>
+	        <field name="arch" type="xml">
+	            <search string="Hồ Sơ">
+	                <group>
+	                    <field name="name"/>
+	                    <field name="ngay_lap"/>
+	                    <field name="ngay_dk" />
+	                    <field name="ngay_luu" />
+	                    <field name="so_luu" />
+	                    <field name="trich_yeu" />
+	                </group>
+	                <group expand="1" string="Group By...">
+	                    <filter string="Ngày Đăng Ký" name="id" icon="terp-stock_symbol-selection" context="{'group_by':'ngay_dk'}"/>
+	                </group>
+	            </search>	
+	        </field>
+	    </record>
+    
         <record model="ir.ui.view" id="ho_so_tree">
             <field name="name">ho.so.tree</field>
             <field name="model">ho.so</field>
@@ -80,7 +101,7 @@
             <field name="arch" type="xml">
                 <form string="Cập Nhật Hồ Sơ" version="7.0">
                     <header>
-	                    <button name="cap_nhat_ho_so" states='draft' string="Cập Nhật" type="object" class="oe_highlight" />
+	                    <button name="cap_nhat_ho_so" states='draft' string="Nhập" type="object" class="oe_highlight" />
 	                    <field name="state" widget="statusbar" statusbar_visible="draft,done" statusbar_colors='{"draft":"blue","done":"blue"}'/>
 	                </header>                
                 	<sheet>  
@@ -98,22 +119,21 @@
 		</record>
 
         <record id="action_cap_nhat_oto_form" model="ir.actions.act_window">
-            <field name="name">Cập Nhật Hồ Sơ</field>
+            <field name="name">Nhập danh sách hồ sơ</field>
 			<field name="type">ir.actions.act_window</field>
             <field name="res_model">cap.nhat.oto</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
             <field name="view_id" ref="cap_nhat_oto_tree_view"/>
         </record>
-        <menuitem id="menu_cap_nhat" parent="ho_so" name="Cập Nhật"/>
-        <menuitem action="action_cap_nhat_oto_form"
-            id="menu_action_cap_nhat_oto_form"
-            parent="menu_cap_nhat" sequence="100"/>
 
 		<menuitem id="ho_so" name="Thẻ A3"/>
 	    <menuitem id="menu_ho_so" parent="ho_so" name="Thẻ A3"/>
 	    <menuitem id="menu_action_ho_so" parent="menu_ho_so" name="Thẻ A3" action="action_ho_so" sequence="5"/>
-	    <menuitem id="menu_action_the_a3_dk_xe_oto_report" action="action_the_a3_dk_xe_oto_report"
+	    <menuitem action="action_cap_nhat_oto_form"
+            id="menu_action_cap_nhat_oto_form"
+            parent="menu_ho_so" sequence="7"/>
+	    <menuitem id="menu_action_the_a3_dk_xe_oto_report" name="In danh sách hồ sơ" action="action_the_a3_dk_xe_oto_report"
             parent="menu_ho_so" sequence="10"/>
  
     </data>

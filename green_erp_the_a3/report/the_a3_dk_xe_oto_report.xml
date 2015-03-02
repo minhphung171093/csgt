@@ -5,7 +5,7 @@
 	        <field name="name">the_a3_dk_xe_oto_report</field>
 	        <field name="type">ir.actions.report.xml</field>
 	        <field name="model">the.a3.dk.xe.oto</field>
-	        <field name="report_name">the_a3_dk_xe_oto_report</field>
+	        <field name="report_name">DANH SÁCH ĐĂNG KÝ HỒ SƠ XE Ô TÔ</field>
 	        <field name="report_type">aeroo</field>
 	        <field name="in_format">oo-odt</field>
 	        <field name="out_format" model="report.mimetypes" search="[('code','=','oo-doc'),('compatible_types','=','oo-odt')]"/>
@@ -22,7 +22,7 @@
 			id="the_a3_dk_xe_oto_report" 
 			model="the.a3.dk.xe.oto" 
 			name="the_a3_dk_xe_oto_report"
-	        string="Print Đăng ký xe ô tô"
+	        string="DANH SÁCH ĐĂNG KÝ HỒ SƠ XE Ô TÔ"
 	        rml="green_erp_the_a3/report/the_a3_dk_xe_oto_report.odt"/>	
     </data>
 </openerp>

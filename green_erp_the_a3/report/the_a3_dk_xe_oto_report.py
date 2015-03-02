@@ -40,6 +40,7 @@ class Parser(report_sxw.rml_parse):
             'get_dk_xe':self.get_dk_xe,
             'convert_date': self.convert_date,
             'get_date': self.get_date,
+            'get_cb_lap_hs': self.get_cb_lap_hs,
         })
         
     def convert_date(self,date):
@@ -59,7 +60,11 @@ class Parser(report_sxw.rml_parse):
                'year': year,
                }
         return res
-        
+    
+    def get_cb_lap_hs(self):
+        wizard_data = self.localcontext['data']['form']
+        return wizard_data['cb_lap_hs']
+    
     def get_dk_xe(self):
         res = {}
         wizard_data = self.localcontext['data']['form']

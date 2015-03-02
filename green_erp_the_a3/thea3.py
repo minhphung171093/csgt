@@ -82,7 +82,7 @@ class cap_nhat_oto(osv.osv):
         'store_fname': fields.char('Stored Filename', size=256),
         'db_datas': fields.binary('Database Data'),
         'file_size': fields.integer('File Size'),
-        'state':fields.selection([('draft', 'Mới'),('done', 'Đã Cập Nhật')],'Status', readonly=True)
+        'state':fields.selection([('draft', 'Mới'),('done', 'Đã Nhập')],'Status', readonly=True)
     }
     
     _defaults = {
